@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    # image: ai_amaze_python_img
+    container_name: tbd_langchain_backend
+    command: python3 run.py
+    volumes:
+      - ./:/code/
+    # network_mode: "host"
+    ports:
+    - "9736:9376"
+    environment:
+      PORT: 9736
+      HOST: 0.0.0.0
