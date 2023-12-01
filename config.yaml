@@ -1,0 +1,64 @@
+model:
+  background:
+    hot_words: ["你好", "哈囉", "你囉", "他囉"]  # 背景關鍵字喚醒清單 (必須是陣列或空陣列)
+    sim_threshold: 0.65  # 背景關鍵字喚醒閥值
+    host: "127.0.0.1"  # 127.0.0.1
+    port: 8787
+    use_pun: False  # 是否使用標點符號(沒GPU會大幅降低速度)
+    streaming:  # 背景預設是流式
+      lang: "zh"
+      time: 0.75  # 若為0則不會啟動關鍵字檢查
+  foreground:
+    model_size: "large"  # 支援 "tiny", "base", "small", "medium", "large"，若為None則使用伺服器第一個載入的模型
+    lang: ~  # 最後結果使用的語言， ~ = None = 自動偵測
+    se: True  # 二次降噪(由伺服器端執行)
+    tbd_url: "http://211.22.221.173:8787/asr"  # 192.168.1.78 # 211.22.221.173
+    fallback_url: "https://openai-staging.thebarkingdog.tw/api/v1/speech_to_text"
+    use_pun: True  # 是否使用標點符號(沒GPU會大幅降低速度，目前使用簡單標記，無影響速度)
+    save_file: False  # 是否將 full 音檔儲存
+    streaming:
+      # model: "background"
+      lang: "zh"  # 流式過程中使用的語言
+      time: 0  # 若不想使用流式可把此直設為0
+
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  use_password: True  # 如果 redis 有設密碼則一定要為 True
+
+# 麥克風識別器
+recognizer:
+  pause_end_time: 0.8  # 當一句話沒聲音幾秒後，該音訊將判斷為一個段落
+  dynamic_energy: False  # 是否開啟動態能量閥值
+  init_energy: 2000  # 能量閥值初始值
+  min_update_ratio: 0.5  # 更新比
+  # min_energy: ~  # 當高於此數值的聲音才會調整並平均當前能量閥值
+  adjust_for_ambient_noise_time: 5  # 若設定動態偵測能量，但未設置能量初始值時，將先暖機幾秒來偵測環境音量
+  print_curr_energy: False  # 印出當前的麥克風能量值(註:必須同時設定 terminal_level為TRACE等級才能運作，且console會列印非常非常多訊息)
+
+# 監聽設定
+listen:
+  background:
+    timeout: 1  # 背景監聽 timeout 時間 (會自動重新監聽)
+    phrase_time_limit: 5  # 從有開始有聲音後，背景一句話最長能講幾秒
+  foreground:
+    timeout: 20  # 前景景監聽 timeout 時間 (超過此時間未有任何聲音會切回背景)
+    phrase_time_limit: 10  # 從有開始有聲音後，前景一句話最長能講幾秒
+
+# 語音活性檢測 (功能取消中，暫時無作用)
+vad:
+  threshold: 0.5  # 噪音閥值
+  min_speech_duration_ms: 50  # 聲音段落低於此'毫秒'將被捨棄
+  background: False  # 是否在背景狀態啟動 VAD
+  foreground: False  # 是否在前景狀態啟動 VAD
+
+# 文本糾正器
+corrector:
+  enable: True
+  proper_name_path: "config/custom_proper.txt"
+  sim_threshold: 0.79
+  bopomofo: False  # 使用注音或拼音
+  use_tone: False  # 是否帶聲調
+
+# 支援 'CRITICAL', 'ERROR', 'WARNING', 'SUCCESS', 'INFO', 'DEBUG', "TRACE"
+terminal_level: "INFO"

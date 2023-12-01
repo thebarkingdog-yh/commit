@@ -1,0 +1,110 @@
+{
+  "first_example": {
+    "summary": "token memory",
+    "description": "最多 tokens 的移動窗口 memory",
+    "value": {
+      "question": "問題打在這裡",
+      "rephrase_model": {
+        "model_name": "gpt-4",
+        "timeout": 10,
+        "max_retries": 2,
+        "temperature": 0
+      },
+      "rag_model": {
+        "model_name": "gpt-3.5-turbo-1106",
+        "timeout": 10,
+        "max_retries": 2,
+        "temperature": 0
+      },
+      "streaming": false,
+      "memory": {
+        "chat_history": [
+          {
+            "role": "user",
+            "data": "王小明今天出門忘記帶雨傘"
+          },
+          {
+            "role": "bot",
+            "data": "王小明忘記帶雨傘的情況下，有一些應對雨天的方法，他可以考慮：\n\n尋找遮蔽處: 在路上尋找建築物、樹木或其他的遮蔽處，暫時避開雨水。\n\n借用: 如果周圍有朋友、同事或陌生人，可以考慮向他們借用雨傘，多數人都樂於提供幫助。\n\n購買雨傘: 如果周邊有賣雨傘的商店，可以考慮購買一把，或者查找自動販賣機等地方是否有出售。\n\n使用塑膠袋: 如果找不到雨傘，可以用塑膠袋或購物袋臨時遮擋雨水。將袋子套在頭上，留出眼睛即可。\n\n搭乘交通工具: 如果附近有公共交通工具，例如公車、捷運或計程車，可以考慮搭乘它們，減少在雨中的曝曬時間。\n\n希望這些建議對王小明在沒有雨傘的情況下應對雨天有所幫助。"
+          }
+        ],
+        "memory_type": "token",
+        "token": 2000
+      },
+      "retriever": {
+        "namespace": "ai-amaze-knowledges-dev",
+        "filter": {},
+        "retriever_type": "vst",
+        "search_type": "mmr",
+        "top_K": 10
+      }
+    }
+  },
+  "second_example": {
+    "summary": "window memory",
+    "description": "最多 k * 2 筆 memory",
+    "value": {
+      "question": "問題打在這裡",
+      "rephrase_model": {
+        "model_name": "gpt-4",
+        "timeout": 10,
+        "max_retries": 2,
+        "temperature": 0
+      },
+      "rag_model": {
+        "model_name": "gpt-3.5-turbo-1106",
+        "timeout": 10,
+        "max_retries": 2,
+        "temperature": 0
+      },
+      "streaming": false,
+      "memory": {
+        "chat_history": [
+          {
+            "role": "user",
+            "data": "王小明今天出門忘記帶雨傘"
+          },
+          {
+            "role": "bot",
+            "data": "王小明忘記帶雨傘的情況下，有一些應對雨天的方法，他可以考慮：\n\n尋找遮蔽處: 在路上尋找建築物、樹木或其他的遮蔽處，暫時避開雨水。\n\n借用: 如果周圍有朋友、同事或陌生人，可以考慮向他們借用雨傘，多數人都樂於提供幫助。\n\n購買雨傘: 如果周邊有賣雨傘的商店，可以考慮購買一把，或者查找自動販賣機等地方是否有出售。\n\n使用塑膠袋: 如果找不到雨傘，可以用塑膠袋或購物袋臨時遮擋雨水。將袋子套在頭上，留出眼睛即可。\n\n搭乘交通工具: 如果附近有公共交通工具，例如公車、捷運或計程車，可以考慮搭乘它們，減少在雨中的曝曬時間。\n\n希望這些建議對王小明在沒有雨傘的情況下應對雨天有所幫助。"
+          }
+        ],
+        "memory_type": "window",
+        "token": 3
+      },
+      "retriever": {
+        "namespace": "ai-amaze-knowledges-dev",
+        "filter": {},
+        "retriever_type": "vst",
+        "search_type": "mmr",
+        "top_K": 10
+      }
+    }
+  },
+  "third_example": {
+    "summary": "easy request",
+    "description": "省略有 default 值的參數",
+    "value": {
+      "question": "問題打在這裡",
+      "rephrase_model": {
+      },
+      "rag_model": {
+      },
+      "memory": {
+        "chat_history": [
+          {
+            "role": "user",
+            "data": "王小明今天出門忘記帶雨傘"
+          },
+          {
+            "role": "bot",
+            "data": "王小明忘記帶雨傘的情況下，有一些應對雨天的方法，他可以考慮：\n\n尋找遮蔽處: 在路上尋找建築物、樹木或其他的遮蔽處，暫時避開雨水。\n\n借用: 如果周圍有朋友、同事或陌生人，可以考慮向他們借用雨傘，多數人都樂於提供幫助。\n\n購買雨傘: 如果周邊有賣雨傘的商店，可以考慮購買一把，或者查找自動販賣機等地方是否有出售。\n\n使用塑膠袋: 如果找不到雨傘，可以用塑膠袋或購物袋臨時遮擋雨水。將袋子套在頭上，留出眼睛即可。\n\n搭乘交通工具: 如果附近有公共交通工具，例如公車、捷運或計程車，可以考慮搭乘它們，減少在雨中的曝曬時間。\n\n希望這些建議對王小明在沒有雨傘的情況下應對雨天有所幫助。"
+          }
+        ],
+        "memory_type": "window"
+      },
+      "retriever": {
+        "retriever_type": "vst"}
+    }
+  }
+}
