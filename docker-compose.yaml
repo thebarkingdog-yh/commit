@@ -10,7 +10,7 @@ services:
       - ./:/code/
     # network_mode: "host"
     ports:
-    - "9736:9376"
+    -  "9736:9376"
     environment:
       PORT: 9736
       HOST: 0.0.0.0
