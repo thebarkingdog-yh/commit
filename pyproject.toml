@@ -36,13 +36,6 @@ black = "^23.11.0"
 isort = "^5.12.0"
 ruff = "^0.1.5"
 
-
-[tool.commitizen]
-name = "cz_conventional_commits"
-tag_format = "$version"
-version_scheme = "pep440"
-version_provider = "poetry"
-update_changelog_on_bump = true
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -52,3 +45,10 @@ profile = 'black'
 
 [tool.ruff]
 extend-include = ["*.ipynb"]
+
+[tool.commitizen]
+#name = "cz_conventional_commits"
+#tag_format = "$version"
+#version_scheme = "pep440"
+version_provider = "poetry"
+update_changelog_on_bump = true
