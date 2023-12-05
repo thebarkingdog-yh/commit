@@ -16,6 +16,11 @@ repos:
     - id: check-xml
     - id: check-json
 
+-   repo: https://github.com/commitizen-tools/commitizen
+    rev: 3.12.0
+    hooks:
+    - id: commitizen  # pre-commit install --hook-type commit-msg
+
 -   repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
@@ -45,8 +50,3 @@ repos:
     rev: v3.0.1
     hooks:
     - id: docker-compose-check
-
--   repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.12.0
-    hooks:
-    - id: commitizen  # pre-commit install --hook-type commit-msg
