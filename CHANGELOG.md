@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.1 (2023-12-05)
+
+### Fix
+
+- fixbug
+- bug fix2
+- bug fix1
+
 ## 3.1.0 (2023-12-05)
 
 ### Feat
