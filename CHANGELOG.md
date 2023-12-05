@@ -1,4 +1,4 @@
-# Unreleased
+# Released
 
 ## 3.1.3 (2023-12-05)
 
