@@ -1,17 +1,17 @@
-# Releases
+# Changelog
 
 ## 3.1.1 (2023-12-05)
 
 ### Fix
 
 - bug fix2
-- bug fix
+- bug fix1
 
 ## 3.1.0 (2023-12-05)
 
 ### Feat
 
-- cz test1
+- cz test
 
 ## 3.0.3 (2023-12-05)
 
