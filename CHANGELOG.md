@@ -4,8 +4,8 @@
 
 ### Fix
 
-- format1
-- format
+- format 1
+- format 2
 
 ## 3.1.1 (2023-12-05)
 
