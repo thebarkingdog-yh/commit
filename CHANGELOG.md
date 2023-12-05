@@ -10,7 +10,7 @@
 
 ### Fix
 
-- fixbug
+- fix bug
 - bug fix2
 - bug fix1
 
