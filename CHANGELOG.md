@@ -1,24 +1,24 @@
-# Changelog
+# Unreleased
 
 ## 3.1.3 (2023-12-05)
 
 ### Fix
 
-- fix bug
+- fixbug
 
 ## 3.1.2 (2023-12-05)
 
 ### Fix
 
-- format 1
-- format 2
+- format
+- format
 
 ## 3.1.1 (2023-12-05)
 
 ### Fix
 
-- fix bug
-- bug fix4
+- fixbug
+- bug fix2
 - bug fix1
 
 ## 3.1.0 (2023-12-05)
