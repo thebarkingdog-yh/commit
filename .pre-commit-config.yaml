@@ -7,7 +7,7 @@ repos:
     - id: trailing-whitespace
     - id: end-of-file-fixer
     - id: check-added-large-files
-      args: ['--maxkb=4096']
+      args: [ "--maxkb=4096" ]
     - id: check-ast
     - id: name-tests-test
     - id: check-case-conflict
