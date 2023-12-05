@@ -5,7 +5,7 @@
 ### Fix
 
 - bug fix2
-- bug fix1
+- bug fix
 
 ## 3.1.0 (2023-12-05)
 
