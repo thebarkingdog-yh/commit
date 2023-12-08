@@ -15,7 +15,6 @@
 - change prompt
 
 ## 3.2.7 (2023-12-08)
-
 ### Fix
 - update changelog
 ## 3.2.6 (2023-12-08)
