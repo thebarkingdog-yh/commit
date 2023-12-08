@@ -9,7 +9,6 @@
 
 - perf test
 ## 3.2.8 (2023-12-08)
-
 ### Refactor
 
 - change prompt
