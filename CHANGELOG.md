@@ -19,7 +19,6 @@
 ### Fix
 
 - update changelog
-
 ## 3.2.6 (2023-12-08)
 
 ### Fix
