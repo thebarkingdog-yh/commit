@@ -3,6 +3,7 @@
 ### Fix
 
 - update changelog
+- update changelog
 
 ## 3.2.1 (2023-12-08)
 

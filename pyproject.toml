@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "faster-whisper-master"
-version = "3.2.1"
+version = "3.2.2"
 description = ""
 authors = ["sushi <yihsiang@barkingdog.ai>"]
 readme = "README.md"
@@ -51,4 +51,5 @@ extend-include = ["*.ipynb"]
 #tag_format = "$version"
 #version_scheme = "pep440"
 version_provider = "poetry"
-update_changelog_on_bump = false
+update_changelog_on_bump = true
+changelog_incremental = true
