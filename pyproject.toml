@@ -52,4 +52,4 @@ extend-include = ["*.ipynb"]
 #version_scheme = "pep440"
 version_provider = "poetry"
 update_changelog_on_bump = true
-changelog_incremental = false
+# changelog_incremental = true
