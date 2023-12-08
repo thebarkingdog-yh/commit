@@ -1,4 +1,10 @@
-# Released
+# Changelog
+
+## 3.2.1 (2023-12-08)
+
+### Fix
+
+- change main
 
 ## 3.2.0 (2023-12-07)
 
