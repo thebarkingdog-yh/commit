@@ -8,7 +8,7 @@
 
 def print_hi(name):
     print(f"Hi, {name}")
-    # a = [1, 2, 3]
+    # a = [1, 2, 4]
 
 
 # Press the green button in the gutter to run the script.

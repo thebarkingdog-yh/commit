@@ -1,4 +1,8 @@
-# Changelog
+## 3.2.2 (2023-12-08)
+
+### Fix
+
+- update changelog
 
 ## 3.2.1 (2023-12-08)
 
