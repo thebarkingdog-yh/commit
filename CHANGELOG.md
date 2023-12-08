@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.9 (2023-12-08)
+
+### Perf
+
+- perf test
+
 ## 3.2.8 (2023-12-08)
 
 ### Refactor
