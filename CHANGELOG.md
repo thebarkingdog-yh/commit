@@ -1,7 +1,6 @@
 # Changelog
 
 ## 3.2.10 (2023-12-08)
-
 ### Refactor
 
 - add

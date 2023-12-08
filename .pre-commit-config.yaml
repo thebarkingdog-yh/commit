@@ -1,6 +1,10 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 
+# pre-commit install                            啟用 git hook
+# pre-commit install --hook-type commit-msg     啟用 檢查 git commit message
+# pre-commit autoupdate                         更新 以下 repo 的版本
+
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
@@ -30,14 +34,14 @@ repos:
     - id: black-jupyter
 
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.6
+    rev: v0.1.7
     hooks:
     - id: ruff
         # args: [ --fix ]
     - id: ruff-format
 
 -   repo: https://github.com/markdownlint/markdownlint
-    rev: v0.13.0
+    rev: v0.12.0
     hooks:
     - id: markdownlint
       args: ["-r", "~MD002, ~MD024"]
@@ -48,6 +52,6 @@ repos:
     - id: docker-compose-check
 
 -   repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.12.0
+    rev: v3.13.0
     hooks:
-    - id: commitizen  # pre-commit install --hook-type commit-msg
+    - id: commitizen
