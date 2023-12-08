@@ -1,5 +1,27 @@
 # Changelog
 
+## 3.3.0 (2023-12-08)
+
+### Feat
+
+- foo
+
+### Fix
+
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+- foo
+
 ## 3.2.10 (2023-12-08)
 ### Refactor
 
