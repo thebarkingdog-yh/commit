@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "faster-whisper-master"
-version = "3.2.9"
+version = "3.2.10"
 description = ""
 authors = ["sushi <yihsiang@barkingdog.ai>"]
 readme = "README.md"
