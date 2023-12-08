@@ -44,7 +44,7 @@ repos:
     rev: v0.13.0
     hooks:
     - id: markdownlint
-      args: ["-r", "~MD002, ~MD024"]
+      args: ["-r", "~MD024,~MD022"]
 
 -   repo: https://github.com/IamTheFij/docker-pre-commit
     rev: v3.0.1
